@@ -4,12 +4,20 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Logan Cross Writes</title>
+		<!-- Favicons / PWA -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#67c8be" />
+		<meta name="msapplication-TileColor" content="#67c8be" />
+		<meta name="theme-color" content="#ffffff" />
 		<!-- Google Fonts: Roboto Slab -->
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
 		<!-- Font Awesome 7 for social icons -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
-		<link rel="icon" href="images/favicon-circle.ico" type="image/x-icon" />
-		<link rel="shortcut icon" href="images/favicon-circle.ico" type="image/x-icon" />
+		<!-- <link rel="icon" href="images/favicon-circle.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="images/favicon-circle.ico" type="image/x-icon" /> -->
 		<style>
 			/* Make the viewport centring robust on mobile */
 			* {
@@ -33,8 +41,9 @@
 
 			/* True circle, no padding distortion */
 			.circle {
-				/* remove the padding that was skewing the shape */
-				/* padding: 0;  ← implicit as we don’t set any */
+				margin: auto;
+				text-align: center;
+				padding: 1em 0.5em;
 				width: 300px;
 				aspect-ratio: 1 / 1; /* keeps it a perfect circle at any size */
 				border-radius: 50%;
