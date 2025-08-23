@@ -16,13 +16,29 @@
 		<meta name="theme-color" content="#ffffff" />
 
 		<!-- Google Fonts: Roboto Slab -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" /> -->
 
 		<link rel="preload" as="image" href="images/avatar-300.webp" imagesrcset="avatar-300.webp 1x, avatar-600.webp 2x" imagesizes="(max-width: 640px) 300px, 300px" />
 
 		<style>
+			/* roboto-slab-regular - latin */
+			@font-face {
+				font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+				font-family: 'Roboto Slab';
+				font-style: normal;
+				font-weight: 400;
+				src: url('fonts/roboto-slab-v35-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+			}
+			/* roboto-slab-800 - latin */
+			@font-face {
+				font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+				font-family: 'Roboto Slab';
+				font-style: normal;
+				font-weight: 800;
+				src: url('fonts/roboto-slab-v35-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+			}
 			/* Make the viewport centring robust on mobile */
 			* {
 				box-sizing: border-box;
@@ -67,7 +83,7 @@
 				color: #333;
 			}
 			.caption .title {
-				font-weight: 700;
+				font-weight: 800;
 				font-size: 1.8rem;
 			}
 			.caption .subtitle {
