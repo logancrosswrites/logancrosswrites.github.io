@@ -7,18 +7,11 @@
 		<meta name="description" content="Logan Cross — serialised LitRPG. Follow along on Substack, Royal Road, Patreon and more." />
 
 		<!-- Favicons / PWA -->
-		<!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-		<link rel="manifest" href="/site.webmanifest" />
-		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#67c8be" />
-		-->
 		<link rel="icon" href="favicon.ico" />
 		<link rel="shortcut" href="favicon-square.ico" />
-		<!-- <link rel="icon" type="image/svg+xml" href="favicon.svg" /> -->
-		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-		<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 		<link rel="manifest" href="site.webmanifest" />
 		<meta name="theme-color" content="#ffffff" />
 
@@ -28,9 +21,9 @@
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
 
 		<!-- Font Awesome 7 for social icons -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" /> -->
 
-		<link rel="preload" as="image" href="avatar-300.webp" imagesrcset="avatar-300.webp 1x, avatar-600.webp 2x" imagesizes="(max-width: 640px) 300px, 300px" />
+		<link rel="preload" as="image" href="images/avatar-300.webp" imagesrcset="avatar-300.webp 1x, avatar-600.webp 2x" imagesizes="(max-width: 640px) 300px, 300px" />
 
 		<style>
 			/* Make the viewport centring robust on mobile */
@@ -106,43 +99,83 @@
 				fill: currentColor;
 				vertical-align: -0.1em;
 			}
+			.icon {
+				background-repeat: no-repeat;
+				background-size: cover;
+				display: inline-block;
+				height: 1.2em;
+				width: 1.2em;
+			}
+			.icon-feather {
+				background: url('images/feather-pointed.svg');
+			}
+			.icon-envelope {
+				background: url('images/envelope.svg');
+			}
+			.icon-substack {
+				background: url('images/substack.svg');
+			}
+			.icon-book {
+				background: url('images/book.svg');
+			}
+			.icon-patreon {
+				background: url('images/patreon.svg');
+			}
+			.icon-reddit {
+				background: url('images/reddit-alien.svg');
+			}
+			.icon-x {
+				background: url('images/square-x-twitter.svg');
+			}
+			.icon-instagram {
+				background: url('images/square-instagram.svg');
+			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
 			<div class="circle">
 				<picture>
-					<source srcset="avatar-300.webp 1x, avatar-600.webp 2x" type="image/webp" />
-					<img src="avatar-300.jpg" srcset="avatar-300.jpg 1x, avatar-600.jpg 2x" alt="Avatar" width="300" height="300" fetchpriority="high" decoding="async" />
+					<source srcset="images/avatar-300.webp 1x, images/avatar-600.webp 2x" type="image/webp" />
+					<img src="images/avatar-300.jpg" srcset="images/avatar-300.jpg 1x, images/avatar-600.jpg 2x" alt="Avatar" width="300" height="300" fetchpriority="high" decoding="async" />
 				</picture>
 			</div>
 			<div class="caption">
-				<div class="title">Logan Cross Writes<i class="fa-solid fa-feather"></i></div>
+				<div class="title">
+					Logan Cross Writes
+					<i class="icon icon-feather"></i>
+				</div>
 				<div class="subtitle">Writer • LitRPG • Isekai</div>
 			</div>
 			<div class="socials">
 				<a href="mailto:logan@logancrosswrites.com" aria-label="Email" title="Email">
-					<i class="fas fa-envelope"></i>
+					<!-- <i class="fas fa-envelope"></i> -->
+					<i class="icon icon-envelope"></i>
 				</a>
 				<a href="https://logancrosswrites.substack.com" target="_blank" aria-label="Substack" title="Substack">
-					<svg class="substack-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-						<path d="M 80 32 h 352 v 64 H 80 Z m 0 128 h 352 v 64 H 80 Z m 0 128 h 352 v 192 L 256 416 80 480 Z" />
-					</svg>
+					<!-- substack -->
+					<i class="icon icon-substack"></i>
 				</a>
+
 				<a href="https://www.royalroad.com/profile/798542" target="_blank" aria-label="Royal Road" title="Royal Road">
-					<i class="fas fa-book"></i>
+					<!-- <i class="fas fa-book"></i> -->
+					<i class="icon icon-book"></i>
 				</a>
 				<a href="https://patreon.com/LoganCrossWrites" target="_blank" aria-label="Patreon" title="Patreon">
-					<i class="fab fa-patreon"></i>
+					<!-- <i class="fab fa-patreon"></i> -->
+					<i class="icon icon-patreon"></i>
 				</a>
 				<a href="https://reddit.com/user/LoganCrossWrites" target="_blank" aria-label="Reddit" title="Reddit">
-					<i class="fab fa-reddit"></i>
+					<!-- <i class="fab fa-reddit"></i> -->
+					<i class="icon icon-reddit"></i>
 				</a>
 				<a href="https://x.com/LoganCrossBooks" target="_blank" aria-label="X (Twitter)" title="X (Twitter)">
-					<i class="fab fa-x-twitter"></i>
+					<!-- <i class="fab fa-x-twitter"></i> -->
+					<i class="icon icon-x"></i>
 				</a>
 				<a href="https://instagram.com/logan.cross.writes" target="_blank" aria-label="Instagram" title="Instagram">
-					<i class="fab fa-instagram"></i>
+					<!-- <i class="fab fa-instagram"></i> -->
+					<i class="icon icon-instagram"></i>
 				</a>
 			</div>
 		</div>
