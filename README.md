@@ -1,3 +1,0 @@
-# logancrosswrites.github.io
-
-Coming soon...
