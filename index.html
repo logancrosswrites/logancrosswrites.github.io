@@ -5,44 +5,53 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Logan Cross Writes</title>
 		<!-- Google Fonts: Roboto Slab -->
-		<!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" /> -->
-		<link href="styles/roboto-slab" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
 		<!-- Font Awesome 7 for social icons -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
 		<link rel="icon" href="images/favicon-circle.ico" type="image/x-icon" />
 		<link rel="shortcut icon" href="images/favicon-circle.ico" type="image/x-icon" />
 		<style>
+			/* Make the viewport centring robust on mobile */
+			* {
+				box-sizing: border-box;
+			}
+
 			body {
 				margin: 0;
-				height: 100vh;
-				display: flex;
-				justify-content: center;
-				align-items: center;
+				/* svh/dvh handle iOS/Android browser UI correctly */
+				min-height: 100svh; /* supported on modern mobile */
+				min-height: 100dvh; /* fallback on other modern browsers */
+				display: grid;
+				place-items: center; /* perfect centre */
 				background-color: white;
-				font-family: 'Roboto Slab', sans-serif;
+				font-family: 'Roboto Slab', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 			}
+
 			.container {
 				text-align: center;
 			}
+
+			/* True circle, no padding distortion */
 			.circle {
-				padding-top: 1em;
-				padding-left: 0.5em;
-				padding-right: 0.5em;
-				width: 300px; /* adjust as needed */
-				height: 300px;
+				/* remove the padding that was skewing the shape */
+				/* padding: 0;  ← implicit as we don’t set any */
+				width: 300px;
+				aspect-ratio: 1 / 1; /* keeps it a perfect circle at any size */
 				border-radius: 50%;
 				background-color: #67c8be;
-				display: flex;
-				justify-content: center;
-				align-items: center;
+				display: grid;
+				place-items: center; /* centres the image inside */
 				overflow: hidden;
 			}
 
+			/* Make the image fill the circle neatly */
 			.circle img {
+				width: 100%;
 				height: 100%;
-				width: auto;
+				object-fit: cover; /* cover avoids letterboxing */
 			}
 
+			/* Spacing & type (unchanged from your version, tweak as you like) */
 			.caption {
 				margin-top: 2rem;
 				color: #333;
@@ -56,6 +65,7 @@
 				font-size: 1.2rem;
 			}
 
+			/* Socials row */
 			.socials {
 				margin-top: 2rem;
 				display: flex;
@@ -71,10 +81,10 @@
 				color: #35c4a0;
 			}
 			.substack-icon {
-				padding-top: 0.1em;
 				width: 1.1em;
 				height: 1.1em;
 				fill: currentColor;
+				vertical-align: -0.1em;
 			}
 		</style>
 	</head>
