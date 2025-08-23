@@ -5,17 +5,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Logan Cross Writes</title>
 		<!-- Favicons / PWA -->
+		<!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#67c8be" />
+		<meta name="theme-color" content="#ffffff" /> -->
+
 		<link rel="icon" href="favicon.ico" />
 		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
 		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
 		<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+		<meta name="msapplication-TileColor" content="#67c8be" />
 		<link rel="shortcut icon" href="favicon-square.ico" type="image/x-icon" />
 		<link rel="manifest" href="site.webmanifest" />
-		<meta name="msapplication-TileColor" content="#67c8be" />
-		<meta name="theme-color" content="#ffffff" />
+		<!-- helps Chrome prioritise before parsing HTML -->
+		<link rel="preload" as="image" href="avatar-300.webp" imagesrcset="avatar-300.webp 1x, avatar-600.webp 2x" imagesizes="(max-width: 640px) 300px, 300px" />
 		<!-- Google Fonts: Roboto Slab -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
 		<!-- Font Awesome 7 for social icons -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
@@ -43,22 +53,19 @@
 			/* True circle, no padding distortion */
 			.circle {
 				margin: auto;
-				text-align: center;
-				padding: 1em 0.5em;
 				width: 300px;
-				aspect-ratio: 1 / 1; /* keeps it a perfect circle at any size */
+				aspect-ratio: 1/1;
 				border-radius: 50%;
-				background-color: #67c8be;
 				display: grid;
-				place-items: center; /* centres the image inside */
+				place-items: center;
 				overflow: hidden;
+				border: 10px solid #37938a;
+				background: transparent; /* ring without skew */
 			}
-
-			/* Make the image fill the circle neatly */
 			.circle img {
 				width: 100%;
 				height: 100%;
-				object-fit: cover; /* cover avoids letterboxing */
+				object-fit: cover;
 			}
 
 			/* Spacing & type (unchanged from your version, tweak as you like) */
@@ -67,7 +74,7 @@
 				color: #333;
 			}
 			.caption .title {
-				font-weight: 600;
+				font-weight: 700;
 				font-size: 1.8rem;
 			}
 			.caption .subtitle {
@@ -101,10 +108,9 @@
 	<body>
 		<div class="container">
 			<div class="circle">
-				<!-- <img src="avatar-300.jpg" width="300" height="300" fetchpriority="high" alt="Profile" /> -->
 				<picture>
-					<source srcset="avatar-300.webp" type="image/webp" />
-					<img src="avatar-300.jpg" alt="Avatar" width="600" height="600" />
+					<source srcset="avatar-300.webp 1x, avatar-600.webp 2x" type="image/webp" />
+					<img src="avatar-300.jpg" srcset="avatar-300.jpg 1x, avatar-600.jpg 2x" alt="Avatar" width="300" height="300" fetchpriority="high" decoding="async" />
 				</picture>
 			</div>
 			<div class="caption">
