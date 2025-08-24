@@ -17,16 +17,10 @@
 
 		<link rel="preload" as="image" href="images/avatar-300.webp" imagesrcset="images/avatar-300.webp 1x, images/avatar-600.webp 2x" imagesizes="(max-width: 640px) 300px, 300px" />
 		<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/roboto-slab-v35-latin-700.woff2" />
-
+		<link rel="stylesheet" href="styles/fonts.css" media="print" onload="this.media='all'" />
+		<noscript><link rel="stylesheet" href="styles/fonts.css" /></noscript>
 		<style>
 			/* https://gwfh.mranftl.com/fonts/roboto-slab?subsets=latin */
-			@font-face {
-				font-family: 'Roboto Slab';
-				font-style: normal;
-				font-weight: 400;
-				font-display: swap;
-				src: url('fonts/roboto-slab-v35-latin-regular.woff2') format('woff2');
-			}
 			@font-face {
 				font-family: 'Roboto Slab';
 				font-style: normal;
@@ -144,6 +138,16 @@
 				background: url('images/icons/square-instagram.svg');
 			}
 		</style>
+		<!-- <script>
+			window.addEventListener('load', () => {
+				const face = new FontFace('Roboto Slab', 'url(fonts/roboto-slab-v35-latin-regular.woff2) format("woff2")', { weight: '400', style: 'normal', display: 'swap' });
+				face.load().then((f) => {
+					document.fonts.add(f);
+					const sub = document.querySelector('.caption .subtitle');
+					if (sub) sub.style.fontWeight = '400';
+				});
+			});
+		</script> -->
 	</head>
 	<body>
 		<div class="container">
