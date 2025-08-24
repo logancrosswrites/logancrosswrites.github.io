@@ -1,200 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Logan Cross Writes</title>
-		<meta name="description" content="Logan Cross — serialised LitRPG. Follow along on Substack, Royal Road, Patreon and more." />
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Logan Cross Writes</title>
+    <meta
+      name="description"
+      content="Logan Cross — serialised LitRPG. Follow along on Substack, Royal Road, Patreon and more."
+    />
 
-		<!-- Favicons / PWA -->
-		<link rel="icon" href="favicon.ico" />
-		<link rel="shortcut" href="favicon-square.ico" />
-		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
-		<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
-		<link rel="manifest" href="site.webmanifest" />
-		<meta name="theme-color" content="#ffffff" />
+    <!-- Favicons / PWA -->
+    <link
+      rel="icon"
+      href="favicon.ico"
+    />
+    <link
+      rel="shortcut"
+      href="favicon-square.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="manifest"
+      href="site.webmanifest"
+    />
+    <meta
+      name="theme-color"
+      content="#ffffff"
+    />
 
-		<link rel="preload" as="image" href="images/avatar-300.webp" imagesrcset="images/avatar-300.webp 1x, images/avatar-600.webp 2x" imagesizes="(max-width: 640px) 300px, 300px" />
-		<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/roboto-slab-v35-latin-700.woff2" />
-		<link rel="stylesheet" href="styles/fonts.css" media="print" onload="this.media='all'" />
-		<noscript><link rel="stylesheet" href="styles/fonts.css" /></noscript>
-		<style>
-			/* https://gwfh.mranftl.com/fonts/roboto-slab?subsets=latin */
-			@font-face {
-				font-family: 'Roboto Slab';
-				font-style: normal;
-				font-weight: 700;
-				font-display: swap;
-				src: url('fonts/roboto-slab-v35-latin-700.woff2') format('woff2');
-			}
-			/* Make the viewport centring robust on mobile */
-			* {
-				box-sizing: border-box;
-			}
+    <link
+      rel="preload"
+      as="image"
+      href="images/avatar-300.webp"
+      imagesrcset="images/avatar-300.webp 1x, images/avatar-600.webp 2x"
+      imagesizes="(max-width: 640px) 300px, 300px"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="images/avatar-600.webp"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="fonts/roboto-slab-v35-latin-700.woff2"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="styles/fonts.css"
+    /></noscript>
+    <style>
+      /* https://gwfh.mranftl.com/fonts/roboto-slab?subsets=latin */
+      @font-face {
+        font-family: "Roboto Slab";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url("fonts/roboto-slab-v35-latin-700.woff2") format("woff2");
+      }
+      /* Make the viewport centring robust on mobile */
+      * {
+        box-sizing: border-box;
+      }
 
-			body {
-				margin: 0;
-				/* svh/dvh handle iOS/Android browser UI correctly */
-				min-height: 100svh; /* supported on modern mobile */
-				min-height: 100dvh; /* fallback on other modern browsers */
-				display: grid;
-				place-items: center; /* perfect centre */
-				background-color: white;
-				font-family: 'Roboto Slab', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-			}
+      body {
+        margin: 0;
+        /* svh/dvh handle iOS/Android browser UI correctly */
+        min-height: 100svh; /* supported on modern mobile */
+        min-height: 100dvh; /* fallback on other modern browsers */
+        display: grid;
+        place-items: center; /* perfect centre */
+        background-color: white;
+        font-family: "Roboto Slab", system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, sans-serif;
+      }
 
-			.container {
-				text-align: center;
-			}
+      .container {
+        text-align: center;
+      }
 
-			/* True circle, no padding distortion */
-			.circle {
-				margin: auto;
-				width: 300px;
-				aspect-ratio: 1/1;
-				border-radius: 50%;
-				display: grid;
-				place-items: center;
-				overflow: hidden;
-				outline: 10px solid #37938a;
-				background: transparent; /* ring without skew */
-			}
-			.circle img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
+      /* True circle, no padding distortion */
+      .circle {
+        margin: auto;
+        width: 300px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        outline: 10px solid #37938a;
+        background: transparent; /* ring without skew */
+      }
+      .circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
-			/* Spacing & type (unchanged from your version, tweak as you like) */
-			.caption {
-				margin-top: 2rem;
-				color: #333;
-			}
-			.caption .title {
-				font-weight: 700;
-				font-size: 1.8rem;
-			}
-			.caption .subtitle {
-				font-weight: 400;
-				font-size: 1.2rem;
-			}
+      /* Spacing & type (unchanged from your version, tweak as you like) */
+      .caption {
+        margin-top: 2rem;
+        color: #333;
+      }
+      .caption .title {
+        font-weight: 700;
+        font-size: 1.8rem;
+      }
+      .caption .subtitle {
+        font-weight: 400;
+        font-size: 1.2rem;
+      }
 
-			/* Socials row */
-			.socials {
-				margin-top: 2rem;
-				display: flex;
-				justify-content: center;
-				gap: 20px;
-			}
-			.socials a {
-				color: #333;
-				font-size: 1.8rem;
-				transition: color 0.3s ease;
-			}
-			.socials a:hover {
-				color: #35c4a0;
-			}
-			.socials a:hover .icon {
-				filter: invert(58%) sepia(14%) saturate(2539%) hue-rotate(131deg) brightness(91%) contrast(87%);
-			}
-			.substack-icon {
-				width: 1.1em;
-				height: 1.1em;
-				fill: currentColor;
-				vertical-align: -0.1em;
-			}
-			.icon {
-				background-repeat: no-repeat;
-				background-size: cover;
-				display: inline-block;
-				height: 1.2em;
-				aspect-ratio: 1/1;
-				/* width: 1.2em; */
-			}
-			.icon-feather {
-				background: url('images/icons/feather-pointed.svg');
-			}
-			.icon-envelope {
-				background: url('images/icons/envelope.svg');
-			}
-			.icon-substack {
-				background: url('images/icons/substack.svg');
-				height: 1.1em;
-			}
-			.icon-book {
-				background: url('images/icons/book.svg');
-			}
-			.icon-patreon {
-				background: url('images/icons/patreon.svg');
-			}
-			.icon-reddit {
-				background: url('images/icons/reddit-alien.svg');
-			}
-			.icon-x {
-				background: url('images/icons/square-x-twitter.svg');
-			}
-			.icon-instagram {
-				background: url('images/icons/square-instagram.svg');
-			}
-		</style>
-		<!-- <script>
-			window.addEventListener('load', () => {
-				const face = new FontFace('Roboto Slab', 'url(fonts/roboto-slab-v35-latin-regular.woff2) format("woff2")', { weight: '400', style: 'normal', display: 'swap' });
-				face.load().then((f) => {
-					document.fonts.add(f);
-					const sub = document.querySelector('.caption .subtitle');
-					if (sub) sub.style.fontWeight = '400';
-				});
-			});
-		</script> -->
-	</head>
-	<body>
-		<div class="container">
-			<div class="circle">
-				<picture>
-					<source srcset="images/avatar-300.webp 1x, images/avatar-600.webp 2x" type="image/webp" />
-					<img src="images/avatar-300.jpg" srcset="images/avatar-300.jpg 1x, images/avatar-600.jpg 2x" alt="Avatar" width="300" height="300" fetchpriority="high" decoding="async" />
-				</picture>
-			</div>
-			<div class="caption">
-				<div class="title">
-					Logan Cross Writes
-					<i class="icon icon-feather"></i>
-				</div>
-				<div class="subtitle">Writer • LitRPG • Isekai</div>
-			</div>
-			<div class="socials">
-				<a href="mailto:logan@logancrosswrites.com" aria-label="Email" title="Email">
-					<!-- <i class="fas fa-envelope"></i> -->
-					<i class="icon icon-envelope"></i>
-				</a>
-				<a href="https://logancrosswrites.substack.com" target="_blank" aria-label="Substack" title="Substack">
-					<!-- substack -->
-					<i class="icon icon-substack"></i>
-				</a>
+      /* Socials row */
+      .socials {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .socials a {
+        color: #333;
+        font-size: 1.8rem;
+        transition: color 0.3s ease;
+      }
+      .socials a:hover {
+        color: #35c4a0;
+      }
+      .socials a:hover .icon {
+        filter: invert(58%) sepia(14%) saturate(2539%) hue-rotate(131deg)
+          brightness(91%) contrast(87%);
+      }
+      .substack-icon {
+        width: 1.1em;
+        height: 1.1em;
+        fill: currentColor;
+        vertical-align: -0.1em;
+      }
+      .icon {
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-block;
+        height: 1.2em;
+        aspect-ratio: 1/1;
+        /* width: 1.2em; */
+      }
+      .icon-feather {
+        background: url("images/icons/feather-pointed.svg");
+      }
+      .icon-envelope {
+        background: url("images/icons/envelope.svg");
+      }
+      .icon-substack {
+        background: url("images/icons/substack.svg");
+        height: 1.1em;
+      }
+      .icon-book {
+        background: url("images/icons/book.svg");
+      }
+      .icon-patreon {
+        background: url("images/icons/patreon.svg");
+      }
+      .icon-reddit {
+        background: url("images/icons/reddit-alien.svg");
+      }
+      .icon-x {
+        background: url("images/icons/square-x-twitter.svg");
+      }
+      .icon-instagram {
+        background: url("images/icons/square-instagram.svg");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="circle">
+        <img
+          src="images/avatar-300.webp"
+          srcset="images/avatar-300.webp 1x, images/avatar-600.webp 2x"
+          alt="Avatar"
+          width="300"
+          height="300"
+          fetchpriority="high"
+          decoding="async"
+          onerror="this.onerror=null;this.src='images/avatar-300.jpg';this.srcset='images/avatar-300.jpg 1x, images/avatar-600.jpg 2x';"
+        />
 
-				<a href="https://www.royalroad.com/profile/798542" target="_blank" aria-label="Royal Road" title="Royal Road">
-					<!-- <i class="fas fa-book"></i> -->
-					<i class="icon icon-book"></i>
-				</a>
-				<a href="https://patreon.com/LoganCrossWrites" target="_blank" aria-label="Patreon" title="Patreon">
-					<!-- <i class="fab fa-patreon"></i> -->
-					<i class="icon icon-patreon"></i>
-				</a>
-				<a href="https://reddit.com/user/LoganCrossWrites" target="_blank" aria-label="Reddit" title="Reddit">
-					<!-- <i class="fab fa-reddit"></i> -->
-					<i class="icon icon-reddit"></i>
-				</a>
-				<a href="https://x.com/LoganCrossBooks" target="_blank" aria-label="X (Twitter)" title="X (Twitter)">
-					<!-- <i class="fab fa-x-twitter"></i> -->
-					<i class="icon icon-x"></i>
-				</a>
-				<a href="https://instagram.com/logan.cross.writes" target="_blank" aria-label="Instagram" title="Instagram">
-					<!-- <i class="fab fa-instagram"></i> -->
-					<i class="icon icon-instagram"></i>
-				</a>
-			</div>
-		</div>
-	</body>
+        <!-- <picture>
+          <source
+            srcset="images/avatar-300.webp 1x, images/avatar-600.webp 2x"
+            type="image/webp"
+          />
+          <img
+            src="images/avatar-300.jpg"
+            srcset="images/avatar-300.jpg 1x, images/avatar-600.jpg 2x"
+            alt="Avatar"
+            width="300"
+            height="300"
+            fetchpriority="high"
+            decoding="async"
+            data-lcp="hero"
+          />
+        </picture> -->
+      </div>
+      <div class="caption">
+        <div class="title">
+          Logan Cross Writes
+          <i class="icon icon-feather"></i>
+        </div>
+        <div class="subtitle">Writer • LitRPG • Isekai</div>
+      </div>
+      <div class="socials">
+        <a
+          href="mailto:logan@logancrosswrites.com"
+          aria-label="Email"
+          title="Email"
+        >
+          <!-- <i class="fas fa-envelope"></i> -->
+          <i class="icon icon-envelope"></i>
+        </a>
+        <a
+          href="https://logancrosswrites.substack.com"
+          target="_blank"
+          aria-label="Substack"
+          title="Substack"
+        >
+          <!-- substack -->
+          <i class="icon icon-substack"></i>
+        </a>
+
+        <a
+          href="https://www.royalroad.com/profile/798542"
+          target="_blank"
+          aria-label="Royal Road"
+          title="Royal Road"
+        >
+          <!-- <i class="fas fa-book"></i> -->
+          <i class="icon icon-book"></i>
+        </a>
+        <a
+          href="https://patreon.com/LoganCrossWrites"
+          target="_blank"
+          aria-label="Patreon"
+          title="Patreon"
+        >
+          <!-- <i class="fab fa-patreon"></i> -->
+          <i class="icon icon-patreon"></i>
+        </a>
+        <a
+          href="https://reddit.com/user/LoganCrossWrites"
+          target="_blank"
+          aria-label="Reddit"
+          title="Reddit"
+        >
+          <!-- <i class="fab fa-reddit"></i> -->
+          <i class="icon icon-reddit"></i>
+        </a>
+        <a
+          href="https://x.com/LoganCrossBooks"
+          target="_blank"
+          aria-label="X (Twitter)"
+          title="X (Twitter)"
+        >
+          <!-- <i class="fab fa-x-twitter"></i> -->
+          <i class="icon icon-x"></i>
+        </a>
+        <a
+          href="https://instagram.com/logan.cross.writes"
+          target="_blank"
+          aria-label="Instagram"
+          title="Instagram"
+        >
+          <!-- <i class="fab fa-instagram"></i> -->
+          <i class="icon icon-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </body>
 </html>
