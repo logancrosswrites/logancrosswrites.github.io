@@ -50,6 +50,20 @@
       rel="preload"
       as="image"
       href="images/avatar-300.webp"
+      imagesrcset="images/avatar-300.webp 300w, images/avatar-600.webp 600w"
+      imagesizes="300px"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="images/avatar-600.webp"
+      imagesrcset="images/avatar-300.webp 300w, images/avatar-600.webp 600w"
+      imagesizes="300px"
+    />
+    <!-- <link
+      rel="preload"
+      as="image"
+      href="images/avatar-300.webp"
       imagesrcset="images/avatar-300.webp 1x, images/avatar-600.webp 2x"
       imagesizes="(max-width: 640px) 300px, 300px"
     />
@@ -57,7 +71,7 @@
       rel="preload"
       as="image"
       href="images/avatar-600.webp"
-    />
+    /> -->
     <link
       rel="preload"
       as="font"
@@ -203,6 +217,16 @@
       <div class="circle">
         <img
           src="images/avatar-300.webp"
+          srcset="images/avatar-300.webp 300w, images/avatar-600.webp 600w"
+          sizes="300px"
+          alt="Avatar"
+          width="300"
+          height="300"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <!-- <img
+          src="images/avatar-300.webp"
           srcset="images/avatar-300.webp 1x, images/avatar-600.webp 2x"
           alt="Avatar"
           width="300"
@@ -210,7 +234,7 @@
           fetchpriority="high"
           decoding="async"
           onerror="this.onerror=null;this.src='images/avatar-300.jpg';this.srcset='images/avatar-300.jpg 1x, images/avatar-600.jpg 2x';"
-        />
+        /> -->
 
         <!-- <picture>
           <source
