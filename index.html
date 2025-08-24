@@ -16,23 +16,23 @@
 		<meta name="theme-color" content="#ffffff" />
 
 		<link rel="preload" as="image" href="images/avatar-300.webp" imagesrcset="images/avatar-300.webp 1x, images/avatar-600.webp 2x" imagesizes="(max-width: 640px) 300px, 300px" />
+		<link rel="preload" as="font" type="font/woff2" crossorigin href="fonts/roboto-slab-v35-latin-700.woff2" />
 
 		<style>
-			/* roboto-slab-regular - latin */
+			/* https://gwfh.mranftl.com/fonts/roboto-slab?subsets=latin */
 			@font-face {
-				font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 				font-family: 'Roboto Slab';
 				font-style: normal;
 				font-weight: 400;
-				src: url('fonts/roboto-slab-v35-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+				font-display: swap;
+				src: url('fonts/roboto-slab-v35-latin-regular.woff2') format('woff2');
 			}
-			/* roboto-slab-800 - latin */
 			@font-face {
-				font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 				font-family: 'Roboto Slab';
 				font-style: normal;
-				font-weight: 800;
-				src: url('fonts/roboto-slab-v35-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+				font-weight: 700;
+				font-display: swap;
+				src: url('fonts/roboto-slab-v35-latin-700.woff2') format('woff2');
 			}
 			/* Make the viewport centring robust on mobile */
 			* {
@@ -78,7 +78,7 @@
 				color: #333;
 			}
 			.caption .title {
-				font-weight: 800;
+				font-weight: 700;
 				font-size: 1.8rem;
 			}
 			.caption .subtitle {
@@ -119,29 +119,29 @@
 				/* width: 1.2em; */
 			}
 			.icon-feather {
-				background: url('images/feather-pointed.svg');
+				background: url('images/icons/feather-pointed.svg');
 			}
 			.icon-envelope {
-				background: url('images/envelope.svg');
+				background: url('images/icons/envelope.svg');
 			}
 			.icon-substack {
-				background: url('images/substack.svg');
+				background: url('images/icons/substack.svg');
 				height: 1.1em;
 			}
 			.icon-book {
-				background: url('images/book.svg');
+				background: url('images/icons/book.svg');
 			}
 			.icon-patreon {
-				background: url('images/patreon.svg');
+				background: url('images/icons/patreon.svg');
 			}
 			.icon-reddit {
-				background: url('images/reddit-alien.svg');
+				background: url('images/icons/reddit-alien.svg');
 			}
 			.icon-x {
-				background: url('images/square-x-twitter.svg');
+				background: url('images/icons/square-x-twitter.svg');
 			}
 			.icon-instagram {
-				background: url('images/square-instagram.svg');
+				background: url('images/icons/square-instagram.svg');
 			}
 		</style>
 	</head>
