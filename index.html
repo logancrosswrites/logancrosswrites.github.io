@@ -11,8 +11,6 @@
       name="description"
       content="Logan Cross — serialised LitRPG. Follow along on Substack, Royal Road, Patreon and more."
     />
-
-    <!-- Favicons / PWA -->
     <link
       rel="icon"
       href="/favicon.ico"
@@ -45,33 +43,14 @@
       name="theme-color"
       content="#ffffff"
     />
-
-    <!-- <link
-      rel="preload"
-      as="image"
-      href="/images/avatar-300.webp"
-      imagesrcset="/images/avatar-300.webp 300w, images/avatar-600.webp 600w"
-      imagesizes="300px"
-    /> -->
     <link
       rel="preload"
       as="image"
       href="/images/avatar-600.webp"
       imagesrcset="/images/avatar-300.webp 300w, /images/avatar-600.webp 600w"
       imagesizes="300px"
+      fetchpriority="high"
     />
-    <!-- <link
-      rel="preload"
-      as="image"
-      href="/images/avatar-300.webp"
-      imagesrcset="/images/avatar-300.webp 1x, /images/avatar-600.webp 2x"
-      imagesizes="(max-width: 640px) 300px, 300px"
-    />
-    <link
-      rel="preload"
-      as="image"
-      href="/images/avatar-600.webp"
-    /> -->
     <link
       rel="preload"
       as="font"
@@ -216,7 +195,7 @@
     <div class="container">
       <div class="circle">
         <img
-          src="/images/avatar-300.webp"
+          src="/images/avatar-600.webp"
           srcset="/images/avatar-300.webp 300w, /images/avatar-600.webp 600w"
           sizes="300px"
           alt="Avatar"
@@ -225,33 +204,6 @@
           fetchpriority="high"
           decoding="async"
         />
-        <!-- <img
-          src="/images/avatar-300.webp"
-          srcset="/images/avatar-300.webp 1x, images/avatar-600.webp 2x"
-          alt="Avatar"
-          width="300"
-          height="300"
-          fetchpriority="high"
-          decoding="async"
-          onerror="this.onerror=null;this.src='images/avatar-300.jpg';this.srcset='images/avatar-300.jpg 1x, images/avatar-600.jpg 2x';"
-        /> -->
-
-        <!-- <picture>
-          <source
-            srcset="/images/avatar-300.webp 1x, /images/avatar-600.webp 2x"
-            type="image/webp"
-          />
-          <img
-            src="/images/avatar-300.jpg"
-            srcset="/images/avatar-300.jpg 1x, /images/avatar-600.jpg 2x"
-            alt="Avatar"
-            width="300"
-            height="300"
-            fetchpriority="high"
-            decoding="async"
-            data-lcp="hero"
-          />
-        </picture> -->
       </div>
       <div class="caption">
         <div class="title">
@@ -266,7 +218,6 @@
           aria-label="Email"
           title="Email"
         >
-          <!-- <i class="fas fa-envelope"></i> -->
           <i class="icon icon-envelope"></i>
         </a>
         <a
@@ -275,7 +226,6 @@
           aria-label="Substack"
           title="Substack"
         >
-          <!-- substack -->
           <i class="icon icon-substack"></i>
         </a>
 
@@ -285,7 +235,6 @@
           aria-label="Royal Road"
           title="Royal Road"
         >
-          <!-- <i class="fas fa-book"></i> -->
           <i class="icon icon-book"></i>
         </a>
         <a
@@ -294,7 +243,6 @@
           aria-label="Patreon"
           title="Patreon"
         >
-          <!-- <i class="fab fa-patreon"></i> -->
           <i class="icon icon-patreon"></i>
         </a>
         <a
@@ -303,7 +251,6 @@
           aria-label="Reddit"
           title="Reddit"
         >
-          <!-- <i class="fab fa-reddit"></i> -->
           <i class="icon icon-reddit"></i>
         </a>
         <a
@@ -312,7 +259,6 @@
           aria-label="X (Twitter)"
           title="X (Twitter)"
         >
-          <!-- <i class="fab fa-x-twitter"></i> -->
           <i class="icon icon-x"></i>
         </a>
         <a
@@ -321,7 +267,6 @@
           aria-label="Instagram"
           title="Instagram"
         >
-          <!-- <i class="fab fa-instagram"></i> -->
           <i class="icon icon-instagram"></i>
         </a>
       </div>
