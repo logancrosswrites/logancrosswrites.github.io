@@ -120,12 +120,20 @@
     /></noscript>
     <style>
       /* https://gwfh.mranftl.com/fonts/roboto-slab?subsets=latin */
-      @font-face {
+      /* @font-face {
         font-family: "Roboto Slab";
         font-style: normal;
         font-weight: 700;
         font-display: swap;
         src: url("/fonts/roboto-slab-v35-latin-700.woff2") format("woff2");
+      } */
+      /* https://gwfh.mranftl.com/fonts/poppins?subsets=latin */
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url('/fonts/poppins-v23-latin-700.woff2') format('woff2');
       }
       /* Make the viewport centring robust on mobile */
       * {
@@ -139,9 +147,11 @@
         min-height: 100dvh; /* fallback on other modern browsers */
         display: grid;
         place-items: center; /* perfect centre */
+        /* background-color: #5bb6ac; */
         background-color: white;
-        font-family: "Roboto Slab", system-ui, -apple-system, Segoe UI, Roboto,
-          Helvetica, Arial, sans-serif;
+        /* font-family: "Roboto Slab", system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, sans-serif; */
+        font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       }
 
       .container {
@@ -197,8 +207,7 @@
         color: #35c4a0;
       }
       .socials a:hover .icon {
-        filter: invert(58%) sepia(14%) saturate(2539%) hue-rotate(131deg)
-          brightness(91%) contrast(87%);
+        filter: invert(58%) sepia(14%) saturate(2539%) hue-rotate(131deg) brightness(91%) contrast(87%);
       }
       .icon {
         background-repeat: no-repeat;
@@ -213,28 +222,28 @@
         vertical-align: -0.1em;
       } */
       .icon-feather {
-        background: url("/images/icons/feather-pointed.svg");
+        background: url('/images/icons/feather-pointed.svg');
       }
       .icon-envelope {
-        background: url("/images/icons/envelope.svg");
+        background: url('/images/icons/envelope.svg');
       }
       .icon-substack {
-        background: url("/images/icons/substack.svg");
+        background: url('/images/icons/substack.svg');
       }
       .icon-book {
-        background: url("/images/icons/book.svg");
+        background: url('/images/icons/book.svg');
       }
       .icon-patreon {
-        background: url("/images/icons/patreon.svg");
+        background: url('/images/icons/patreon.svg');
       }
       .icon-reddit {
-        background: url("/images/icons/reddit-alien.svg");
+        background: url('/images/icons/reddit-alien.svg');
       }
       .icon-x {
-        background: url("/images/icons/square-x-twitter.svg");
+        background: url('/images/icons/square-x-twitter.svg');
       }
       .icon-medium {
-        background: url("/images/icons/medium.svg");
+        background: url('/images/icons/medium.svg');
       }
       /* .icon-instagram {
         background: url("/images/icons/square-instagram.svg");
@@ -256,12 +265,16 @@
       </div>
       <div class="caption">
         <div class="title">
-          Logan Cross Writes
+          LOGAN CROSS WRITES
           <i class="icon icon-feather"></i>
         </div>
         <div class="subtitle">
-          Fantasy and LitRPG writer. Creator of Zero-Stat Hero, a series of
-          isekai adventures filled with luck, humour, and epic quests.
+          Fantasy and LitRPG writer.
+          <span
+            class="bio-sep"
+            aria-hidden="true"
+          ></span>
+          Creator of Zero-Stat Hero, a series of isekai adventures filled with luck, humour, and epic quests.
         </div>
       </div>
       <div class="socials">
